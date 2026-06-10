@@ -1,45 +1,342 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitio en Construcción</title>
+    <title>Protección Antivirus Completa - Asegura tus Dispositivos</title>
+    <!-- Tailwind CSS para diseño responsivo rápido -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons para iconos limpios y modernos -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Inter para legibilidad premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            base: '#ffffff',
+                            dark: '#242424',
+                            accent: '#feeb29',
+                            accentHover: '#e6d41e',
+                            bgOuter: '#f4f6fa'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f6fa;
         }
-        .container {
-            text-align: center;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #7f8c8d;
-            font-size: 1.1rem;
+        /* Estilo para los checkmarks personalizados del listado */
+        .custom-check {
+            background-color: #feeb29;
+            color: #242424;
         }
     </style>
 </head>
-<body>
+<body class="bg-brand-bgOuter text-brand-dark antialiased">
 
-    <div class="container">
-        <h1>Sitio web en creación</h1>
-        <p>Estamos trabajando para traerte la mejor experiencia muy pronto.</p>
-      <p>Huvytas Advertising.</p>
+    <!-- CONTENEDOR PRINCIPAL: Formato de tarjeta vertical idéntico a smartphone -->
+    <div class="max-w-md mx-auto bg-white min-h-screen shadow-2xl overflow-hidden flex flex-col justify-between border-x border-slate-100">
+        
+        <!-- CONTENIDO DE LA PÁGINA -->
+        <main class="flex-grow">
+            
+            <!-- 1. TÍTULO PRINCIPAL (Normal/Recto, Bold y Centrado) -->
+            <div class="px-6 pt-8 pb-4 text-center">
+                <h1 class="text-xl sm:text-2xl font-black text-slate-900 leading-snug">
+                    La forma más fácil de proteger tus dispositivos y a tu familia de fraudes digitales.
+                </h1>
+            </div>
+
+            <!-- 2. IMAGEN DEL PRODUCTO (Esquinas redondeadas, formato horizontal 16:9) -->
+            <div class="px-5 pb-5">
+                <div class="relative rounded-3xl overflow-hidden shadow-md border border-slate-100 aspect-video">
+                    <img 
+                        src="https://i.pinimg.com/736x/10/ec/dc/10ecdc74559635946c9f632f294a4f5a.jpg" 
+                        alt="Protección en tus manos" 
+                        class="w-full h-full object-cover block"
+                        onerror="this.src='https://placehold.co/1600x900/242424/feeb29?text=Seguridad+Total'"
+                    />
+                </div>
+            </div>
+
+            <!-- 3. SUBTÍTULO SECCIÓN COMPRA (Ajustado para mantener una sola línea sin saltos) -->
+            <div class="px-2 text-center pb-3">
+                <h2 class="text-[18px] sm:text-lg font-extrabold text-slate-900 tracking-tight whitespace-nowrap">
+                    Protección Antivirus Completa – 5 Dispositivos
+                </h2>
+            </div>
+
+            <!-- 4. BOTONES / TARJETAS DE CONTRATACIÓN (En paralelo con Bullets de Suscripción) -->
+            <div class="px-5 pb-8">
+                <div class="grid grid-cols-2 gap-3 pt-4">
+                    
+                    <!-- Tarjeta Izquierda: Contrata con Tarjeta -->
+                    <button 
+                        onclick="handlePurchase('tarjeta')" 
+                        class="bg-white border border-slate-200 hover:border-slate-400 hover:bg-slate-50 rounded-2xl px-3 pb-3.5 pt-6 text-left transition duration-150 flex flex-col justify-between shadow-sm active:scale-[0.98] relative"
+                    >
+
+                        <div class="space-y-1 mt-1">
+                            <span class="block text-[11px] text-slate-500 font-medium leading-tight">
+                                Contrata con tarjeta
+                            </span>
+                            <span class="block text-base font-black text-slate-900 tracking-tight leading-tight">
+                                $39.99 USD
+                            </span>
+                            <span class="block text-[11px] font-semibold text-slate-800 leading-tight">
+                                primer año
+                            </span>
+                        </div>
+                        <span class="block text-[9px] text-slate-400 font-medium pt-3 mt-4 border-t border-slate-100 w-full">
+                            Impuestos incluidos
+                        </span>
+                    </button>
+
+                    <!-- Tarjeta Derecha: Contrata con Claro (Emoji alineado en la parte superior izquierda del bullet) -->
+                    <button 
+                        onclick="handlePurchase('claro')" 
+                        class="bg-brand-accent hover:bg-brand-accentHover border border-brand-accent rounded-2xl px-3 pb-3.5 pt-6 text-left transition duration-150 flex flex-col justify-between shadow-sm relative active:scale-[0.98]"
+                    >
+
+                        <!-- Emoji de fuego posicionado absolutamente al lado izquierdo del bullet negro -->
+                        <span class="absolute -top-[17px] left-[-13px] text-4xl leading-none select-none">🔥</span>
+
+                        <div class="space-y-1 mt-1">
+                            <span class="block text-[11px] text-slate-900 font-bold leading-tight">
+                                Contrata con Claro
+                            </span>
+                            <span class="block text-base font-black text-slate-900 tracking-tight leading-tight">
+                                $3,800 ARS/mes
+                            </span>
+                        </div>
+                        <span class="block text-[9px] text-slate-800 font-semibold pt-3 mt-4 border-t border-black/10 w-full">
+                            Impuestos incluidos
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- 5. SECCIÓN DE BENEFICIOS (Grid de 4 iconos ilustrados con gráficos de alto contraste y color) -->
+            <div class="px-6 py-6 bg-slate-50/50 border-y border-slate-100">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-5">Beneficios</p>
+                
+                <div class="grid grid-cols-4 gap-2 text-center">
+                    <!-- Beneficio 1: Contra virus (Escudo con gradiente y protección) -->
+                    <div class="flex flex-col items-center space-y-2">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 shadow-lg shadow-emerald-500/30 flex items-center justify-center p-2.5">
+                            <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Shield -->
+                                <path d="M24 4L8 11v13c0 10 6.8 19.3 16 22 9.2-2.7 16-12 16-22V11L24 4z" fill="#FFFFFF" />
+                                <path d="M24 7L11 12.7v11.3c0 8.5 5.3 16.3 13 17.5 7.7-2.2 13-10 13-18.5V12.7L24 7z" fill="#FEEB29" />
+                                <!-- Checkmark -->
+                                <path d="M18 23l4 4 8-8" stroke="#242424" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span class="text-[9px] font-semibold text-slate-700 leading-snug">
+                            Contra virus y malware
+                        </span>
+                    </div>
+
+                    <!-- Beneficio 2: Protege identidad (Candado tecnológico con brillo metálico) -->
+                    <div class="flex flex-col items-center space-y-2">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 shadow-lg shadow-blue-500/30 flex items-center justify-center p-2.5">
+                            <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Lock shackle -->
+                                <path d="M15 20v-6c0-5 4-9 9-9s9 4 9 9v6" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" />
+                                <!-- Lock body -->
+                                <rect x="9" y="19" width="30" height="24" rx="6" fill="#FEEB29" />
+                                <!-- Keyhole -->
+                                <circle cx="24" cy="29" r="3.5" fill="#242424" />
+                                <path d="M24 32.5v4.5" stroke="#242424" stroke-width="3" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <span class="text-[9px] font-semibold text-slate-700 leading-snug">
+                            Protege tu identidad
+                        </span>
+                    </div>
+
+                    <!-- Beneficio 3: Multiplataforma (Pila de dispositivos integrados en amarillo y oscuro) -->
+                    <div class="flex flex-col items-center space-y-2">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-600 to-fuchsia-700 shadow-lg shadow-purple-500/30 flex items-center justify-center p-2.5">
+                            <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Computer screen -->
+                                <rect x="3" y="8" width="30" height="20" rx="3" fill="#FFFFFF" />
+                                <rect x="5" y="10" width="26" height="13" fill="#242424" />
+                                <!-- Computer stand -->
+                                <path d="M13 28l-2 7h14l-2-7" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" />
+                                <!-- Phone overlay -->
+                                <rect x="27" y="17" width="16" height="26" rx="4" fill="#FEEB29" stroke="#242424" stroke-width="2" />
+                                <circle cx="35" cy="38" r="1.5" fill="#242424" />
+                            </svg>
+                        </div>
+                        <span class="text-[9px] font-semibold text-slate-700 leading-snug">
+                            Multiplataforma
+                        </span>
+                    </div>
+
+                    <!-- Beneficio 4: Analiza Apps (Navegador escaneado por una lupa dorada) -->
+                    <div class="flex flex-col items-center space-y-2">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-100 border border-amber-200 shadow-sm flex items-center justify-center p-2.5">
+                            <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Web page -->
+                                <rect x="4" y="8" width="34" height="24" rx="4" fill="#242424" />
+                                <circle cx="8" cy="12" r="1.5" fill="#FFFFFF" />
+                                <circle cx="12" cy="12" r="1.5" fill="#FFFFFF" />
+                                <line x1="16" y1="12" x2="32" y2="12" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+                                <!-- Magnifying glass -->
+                                <circle cx="30" cy="28" r="8" fill="#FEEB29" stroke="#242424" stroke-width="2.5" />
+                                <line x1="35.5" y1="33.5" x2="43.5" y2="41.5" stroke="#242424" stroke-width="4.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <span class="text-[9px] font-semibold text-slate-700 leading-snug">
+                            Analiza Apps y sitios web
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. SECCIÓN DE DESCRIPCIÓN CON BULLETS (Protección inteligente) -->
+            <div class="px-6 py-8 space-y-6">
+                <!-- Título descriptivo -->
+                <p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+                    <strong class="text-brand-dark font-extrabold">Protección inteligente</strong> para tus dispositivos, privacidad e información personal mientras navegas, compras o trabajas online.
+                </p>
+
+                <!-- Listado con checks amarillos -->
+                <div class="space-y-4 max-w-sm mx-auto">
+                    <div class="flex items-center gap-3">
+                        <span class="custom-check w-5 h-5 rounded-full flex items-center justify-center shrink-0">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                        </span>
+                        <span class="text-xs sm:text-sm font-semibold text-slate-800">
+                            VPN integral que te protege en línea.
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="custom-check w-5 h-5 rounded-full flex items-center justify-center shrink-0">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                        </span>
+                        <span class="text-xs sm:text-sm font-semibold text-slate-800">
+                            Protección contra estafas
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="custom-check w-5 h-5 rounded-full flex items-center justify-center shrink-0">
+                            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                        </span>
+                        <span class="text-xs sm:text-sm font-semibold text-slate-800">
+                            Protección contra robo de identidad.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- 7. PIE DE PÁGINA (Footer en negro absoluto sin letras inclinadas) -->
+        <footer class="bg-black text-slate-400 py-8 px-6 text-xs border-t border-slate-950">
+            <div class="space-y-6">
+                <!-- Enlaces Legales -->
+                <div class="flex items-center justify-center gap-4 text-slate-200 font-semibold border-b border-neutral-900 pb-5">
+                    <a href="#" class="hover:text-white transition">Política de Privacidad</a>
+
+                    <a href="#" class="hover:text-white transition">Términos y condiciones</a>
+
+                    <a href="#" class="hover:text-white transition">Contacto</a>
+                </div>
+
+                <!-- Textos de Disclaimer de Responsabilidad (Sin cursivas) -->
+                <div class="space-y-4 text-slate-400 text-[10px] leading-relaxed text-center sm:text-left">
+                    <p class="">
+                        CyKadas LLC es un distribuidor autorizado de software de protección. No somos el soporte técnico oficial ni prestamos servicios de reparación. 
+                    </p>
+                    <p class="">
+                        Huvytas Advertising Somos una agencia digital autorizada para la promoción de CyKadas, no somos el soporte técnico oficial CyKadas.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
     </div>
 
+    <!-- 8. BANNER DE ACEPTACIÓN DE COOKIES (Flotante y Adaptable) -->
+    <div id="cookie-banner" class="fixed bottom-0 inset-x-0 md:bottom-5 md:right-5 md:left-auto md:max-w-md bg-brand-dark/95 backdrop-blur-md text-white p-5 md:rounded-3xl border-t md:border border-slate-800 shadow-2xl z-50 transform translate-y-full transition-all duration-500 ease-out hidden">
+        <div class="space-y-4">
+            <div class="flex items-start gap-3">
+                <div class="p-2 bg-brand-accent text-brand-dark rounded-xl shrink-0 mt-0.5">
+                    <i data-lucide="cookie" class="w-5 h-5"></i>
+                </div>
+                <div class="space-y-1">
+                    <h4 class="text-xs font-bold tracking-tight text-white">Uso de Cookies</h4>
+                    <p class="text-[11px] text-slate-300 leading-relaxed">
+                        Utilizamos cookies propias y de terceros para analizar el tráfico, personalizar contenido y medir la efectividad de nuestras campañas publicitarias. Puedes aceptar todas las cookies o consultar más información en nuestra Política de Privacidad.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-end pt-1">
+                <!-- Único Botón "Aceptar" -->
+                <button 
+                    onclick="acceptCookies()" 
+                    class="px-6 py-2 bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-extrabold text-xs rounded-full border border-brand-dark transition duration-150 shadow-md active:scale-[0.98]"
+                >
+                    Aceptar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT DE INTERACCIÓN -->
+    <script>
+        // Inicialización de iconos Lucide
+        lucide.createIcons();
+
+        // Manejador único de compra directo (Personalizable con URLs reales de tu pasarela)
+        function handlePurchase(metodo) {
+            if (metodo === 'tarjeta') {
+                window.location.href = "/anual";
+            } else if (metodo === 'claro') {
+                window.location.href = "/mensual";
+            }
+        }
+
+        // Control y persistencia del Banner de Cookies
+        window.onload = function() {
+            if (!localStorage.getItem('cookies-accepted')) {
+                const banner = document.getElementById('cookie-banner');
+                banner.classList.remove('hidden');
+                setTimeout(() => {
+                    banner.classList.remove('translate-y-full');
+                }, 800); 
+            }
+        }
+
+        // Aceptación de cookies
+        function acceptCookies() {
+            localStorage.setItem('cookies-accepted', 'true');
+            closeCookieBanner();
+        }
+
+        // Cierre y desaparición absoluta del banner para no interferir con la maquetación
+        function closeCookieBanner() {
+            const banner = document.getElementById('cookie-banner');
+            banner.classList.add('translate-y-full');
+            
+            setTimeout(() => {
+                banner.classList.add('hidden');
+            }, 500);
+        }
+    </script>
 </body>
 </html>
