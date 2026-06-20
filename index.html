@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protección Antivirus Completa - Asegura tus Dispositivos</title>
-    <link rel="icon" type="image/x-icon" href="favicon-lp-Norton-AR.png">
+
     <!-- Tailwind CSS para diseño responsivo rápido -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons para iconos limpios y modernos -->
@@ -328,33 +328,36 @@
     </script>
 
     <!-- SCRIPT DE PARÁMETROS URL AUTOMÁTICO EN ENLACES CTA -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // 1. Obtener los parámetros de la URL actual de la página
-            const urlParams = window.location.search;
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-            // Si no hay parámetros en la URL (ej. no viene de un anuncio), no hace nada
-            if (!urlParams) return;
+    const params = new URLSearchParams(window.location.search);
 
-            // 2. Seleccionar todos los botones CTA (identificados por la clase .btn-cta)
-            const ctaButtons = document.querySelectorAll(".btn-cta");
+    if (!params.has("utm_campaign")) {
+        params.set("utm_campaign", "SDHGOGAR_");
+    }
 
-            // 3. Recorrer cada botón y actualizar su enlace
-            ctaButtons.forEach(function (button) {
-                let currentHref = button.getAttribute("href");
+    const finalParams = params.toString();
 
-                if (currentHref) {
-                    // Verificar si el enlace original ya tiene un "?" para no romper la URL
-                    const separator = currentHref.includes("?") ? "&" : "?";
-                    
-                    // Eliminamos el "?" inicial de urlParams para concatenar correctamente si es necesario
-                    const cleanParams = urlParams.startsWith("?") ? urlParams.substring(1) : urlParams;
+    const ctaButtons = document.querySelectorAll(".btn-cta");
 
-                    // Asignar el nuevo enlace modificado al botón
-                    button.setAttribute("href", currentHref + separator + cleanParams);
-                }
-            });
-        });
-    </script>
+    ctaButtons.forEach(function (button) {
+
+        let currentHref = button.getAttribute("href");
+
+        if (!currentHref) return;
+
+        if (currentHref.includes("utm_campaign=")) return;
+
+        const separator = currentHref.includes("?") ? "&" : "?";
+
+        button.setAttribute(
+            "href",
+            currentHref + separator + finalParams
+        );
+    });
+
+});
+</script>
 </body>
 </html>
