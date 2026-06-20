@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protección Antivirus</title>
-    <link rel="icon" type="image/x-icon" href="favicon-lp-Norton-AR.png">
+    <title>Protección Antivirus Completa - Asegura tus Dispositivos</title>
     <!-- Tailwind CSS para diseño responsivo rápido -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons para iconos limpios y modernos -->
@@ -81,11 +80,15 @@
             <div class="px-5 pb-8">
                 <div class="grid grid-cols-2 gap-3 pt-4">
                     
-                    <!-- Tarjeta Izquierda: Contrata con Tarjeta -->
-                    <button 
-                        onclick="handlePurchase('tarjeta')" 
-                        class="bg-white border border-slate-200 hover:border-slate-400 hover:bg-slate-50 rounded-2xl px-3 pb-3.5 pt-6 text-left transition duration-150 flex flex-col justify-between shadow-sm active:scale-[0.98] relative"
+                    <!-- Tarjeta Izquierda: Contrata con Tarjeta (Convertida en enlace nativo con clase CTA) -->
+                    <a 
+                        href="https://r.v2i8b.com/api/v1/bid/redirect?campaign_id=01KJ8T295PD4W69K2E4HJ8ZMAC&url=https%3A%2F%2Fnorton.com&cid=%5Bga_cid%5D&source=gads" 
+                        class="btn-cta bg-white border border-slate-200 hover:border-slate-400 hover:bg-slate-50 rounded-2xl px-3 pb-3.5 pt-6 text-left transition duration-150 flex flex-col justify-between shadow-sm active:scale-[0.98] relative cursor-pointer"
                     >
+                        <!-- Bullet / Badge Centrado Superior -->
+                        <span class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full whitespace-nowrap shadow-sm">
+                            Suscripción anual
+                        </span>
 
                         <div class="space-y-1 mt-1">
                             <span class="block text-[11px] text-slate-500 font-medium leading-tight">
@@ -101,13 +104,17 @@
                         <span class="block text-[9px] text-slate-400 font-medium pt-3 mt-4 border-t border-slate-100 w-full">
                             Impuestos incluidos
                         </span>
-                    </button>
+                    </a>
 
-                    <!-- Tarjeta Derecha: Contrata con Claro (Emoji alineado en la parte superior izquierda del bullet) -->
-                    <button 
-                        onclick="handlePurchase('claro')" 
-                        class="bg-brand-accent hover:bg-brand-accentHover border border-brand-accent rounded-2xl px-3 pb-3.5 pt-6 text-left transition duration-150 flex flex-col justify-between shadow-sm relative active:scale-[0.98]"
+                    <!-- Tarjeta Derecha: Contrata con Claro (Convertida en enlace nativo con clase CTA) -->
+                    <a 
+                        href="https://ar.portal.shop/index.php/n5_gog3_1.html?utm_campaign={placement};SDHGOGAR_" 
+                        class="btn-cta bg-brand-accent hover:bg-brand-accentHover border border-brand-accent rounded-2xl px-3 pb-3.5 pt-6 text-left transition duration-150 flex flex-col justify-between shadow-sm relative active:scale-[0.98] cursor-pointer"
                     >
+                        <!-- Bullet / Badge Centrado Superior -->
+                        <span class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full whitespace-nowrap shadow-sm">
+                            Suscripción mensual
+                        </span>
 
                         <!-- Emoji de fuego posicionado absolutamente al lado izquierdo del bullet negro -->
                         <span class="absolute -top-[17px] left-[-13px] text-4xl leading-none select-none">🔥</span>
@@ -123,25 +130,21 @@
                         <span class="block text-[9px] text-slate-800 font-semibold pt-3 mt-4 border-t border-black/10 w-full">
                             Impuestos incluidos
                         </span>
-                    </button>
+                    </a>
 
                 </div>
             </div>
 
-            <!-- 5. SECCIÓN DE BENEFICIOS (Grid de 4 iconos ilustrados con gráficos de alto contraste y color) -->
+            <!-- 5. SECCIÓN DE BENEFICIOS (Grid de 4 iconos inspirados en la estética de la imagen de referencia) -->
             <div class="px-6 py-6 bg-slate-50/50 border-y border-slate-100">
                 <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-5">Beneficios</p>
                 
                 <div class="grid grid-cols-4 gap-2 text-center">
-                    <!-- Beneficio 1: Contra virus (Escudo con gradiente y protección) -->
+                    <!-- Beneficio 1: Contra virus (Escudo clásico azul corporativo en círculo sutil) -->
                     <div class="flex flex-col items-center space-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 shadow-lg shadow-emerald-500/30 flex items-center justify-center p-2.5">
+                        <div class="w-14 h-14 rounded-full border border-blue-200/80 bg-blue-50/20 flex items-center justify-center p-2.5 transition-transform duration-200 hover:scale-105">
                             <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Shield -->
-                                <path d="M24 4L8 11v13c0 10 6.8 19.3 16 22 9.2-2.7 16-12 16-22V11L24 4z" fill="#FFFFFF" />
-                                <path d="M24 7L11 12.7v11.3c0 8.5 5.3 16.3 13 17.5 7.7-2.2 13-10 13-18.5V12.7L24 7z" fill="#FEEB29" />
-                                <!-- Checkmark -->
-                                <path d="M18 23l4 4 8-8" stroke="#242424" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M24 5c-7 0-12 2-13.5 4.5v14c0 10.5 7 18 13.5 21 6.5-3 13.5-10.5 13.5-21v-14C36 7 31 5 24 5z" fill="#1e62d0" />
                             </svg>
                         </div>
                         <span class="text-[9px] font-semibold text-slate-700 leading-snug">
@@ -149,17 +152,14 @@
                         </span>
                     </div>
 
-                    <!-- Beneficio 2: Protege identidad (Candado tecnológico con brillo metálico) -->
+                    <!-- Beneficio 2: Protege identidad (Silueta humana de perfil clásica) -->
                     <div class="flex flex-col items-center space-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 shadow-lg shadow-blue-500/30 flex items-center justify-center p-2.5">
+                        <div class="w-14 h-14 rounded-full border border-blue-200/80 bg-blue-50/20 flex items-center justify-center p-2.5 transition-transform duration-200 hover:scale-105">
                             <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Lock shackle -->
-                                <path d="M15 20v-6c0-5 4-9 9-9s9 4 9 9v6" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" />
-                                <!-- Lock body -->
-                                <rect x="9" y="19" width="30" height="24" rx="6" fill="#FEEB29" />
-                                <!-- Keyhole -->
-                                <circle cx="24" cy="29" r="3.5" fill="#242424" />
-                                <path d="M24 32.5v4.5" stroke="#242424" stroke-width="3" stroke-linecap="round" />
+                                <!-- Head -->
+                                <circle cx="24" cy="15.5" r="8" fill="#1e62d0" />
+                                <!-- Shoulders -->
+                                <path d="M9 38.5c0-7.5 6.5-13.5 15-13.5s15 6 15 13.5H9z" fill="#1e62d0" />
                             </svg>
                         </div>
                         <span class="text-[9px] font-semibold text-slate-700 leading-snug">
@@ -167,18 +167,17 @@
                         </span>
                     </div>
 
-                    <!-- Beneficio 3: Multiplataforma (Pila de dispositivos integrados en amarillo y oscuro) -->
+                    <!-- Beneficio 3: Multiplataforma (Laptop clásica sólida en azul) -->
                     <div class="flex flex-col items-center space-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-600 to-fuchsia-700 shadow-lg shadow-purple-500/30 flex items-center justify-center p-2.5">
+                        <div class="w-14 h-14 rounded-full border border-blue-200/80 bg-blue-50/20 flex items-center justify-center p-2.5 transition-transform duration-200 hover:scale-105">
                             <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Computer screen -->
-                                <rect x="3" y="8" width="30" height="20" rx="3" fill="#FFFFFF" />
-                                <rect x="5" y="10" width="26" height="13" fill="#242424" />
-                                <!-- Computer stand -->
-                                <path d="M13 28l-2 7h14l-2-7" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" />
-                                <!-- Phone overlay -->
-                                <rect x="27" y="17" width="16" height="26" rx="4" fill="#FEEB29" stroke="#242424" stroke-width="2" />
-                                <circle cx="35" cy="38" r="1.5" fill="#242424" />
+                                <!-- Screen -->
+                                <rect x="8" y="10" width="32" height="21" rx="3" fill="#1e62d0" />
+                                <rect x="11" y="12.5" width="26" height="16" fill="#ffffff" />
+                                <!-- Keyboard Base -->
+                                <path d="M3 31.5h42c0 2.5-3.5 5-7 5H10c-3.5 0-7-2.5-7-5z" fill="#1e62d0" />
+                                <!-- Trackpad slot -->
+                                <rect x="21" y="32" width="6" height="2" rx="0.5" fill="#ffffff" />
                             </svg>
                         </div>
                         <span class="text-[9px] font-semibold text-slate-700 leading-snug">
@@ -186,18 +185,14 @@
                         </span>
                     </div>
 
-                    <!-- Beneficio 4: Analiza Apps (Navegador escaneado por una lupa dorada) -->
+                    <!-- Beneficio 4: Analiza Apps (Lupa azul clásica alineada con el título) -->
                     <div class="flex flex-col items-center space-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-100 border border-amber-200 shadow-sm flex items-center justify-center p-2.5">
+                        <div class="w-14 h-14 rounded-full border border-blue-200/80 bg-blue-50/20 flex items-center justify-center p-2.5 transition-transform duration-200 hover:scale-105">
                             <svg class="w-full h-full" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Web page -->
-                                <rect x="4" y="8" width="34" height="24" rx="4" fill="#242424" />
-                                <circle cx="8" cy="12" r="1.5" fill="#FFFFFF" />
-                                <circle cx="12" cy="12" r="1.5" fill="#FFFFFF" />
-                                <line x1="16" y1="12" x2="32" y2="12" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
-                                <!-- Magnifying glass -->
-                                <circle cx="30" cy="28" r="8" fill="#FEEB29" stroke="#242424" stroke-width="2.5" />
-                                <line x1="35.5" y1="33.5" x2="43.5" y2="41.5" stroke="#242424" stroke-width="4.5" stroke-linecap="round" />
+                                <!-- Lens ring -->
+                                <circle cx="21" cy="21" r="9" stroke="#1e62d0" stroke-width="5" />
+                                <!-- Handle -->
+                                <line x1="27.5" y1="27.5" x2="38" y2="38" stroke="#1e62d0" stroke-width="6.5" stroke-linecap="round" />
                             </svg>
                         </div>
                         <span class="text-[9px] font-semibold text-slate-700 leading-snug">
@@ -250,11 +245,11 @@
             <div class="space-y-6">
                 <!-- Enlaces Legales -->
                 <div class="flex items-center justify-center gap-4 text-slate-200 font-semibold border-b border-neutral-900 pb-5">
-                    <a href="politica-de-privacidad.html" class="hover:text-white transition">Política de Privacidad</a>
-
-                    <a href="terminos-y-condiciones.html" class="hover:text-white transition">Términos y condiciones</a>
-
-                    <a href="contacto.html" class="hover:text-white transition">Contacto</a>
+                    <a href="privacy.html" class="hover:text-white transition">Política de Privacidad</a>
+                    <span>•</span>
+                    <a href="terms.html" class="hover:text-white transition">Términos y condiciones</a>
+                    <span>•</span>
+                    <a href="contact.html" class="hover:text-white transition">Contacto</a>
                 </div>
 
                 <!-- Textos de Disclaimer de Responsabilidad (Sin cursivas) -->
@@ -303,15 +298,6 @@
         // Inicialización de iconos Lucide
         lucide.createIcons();
 
-        // Manejador único de compra directo (Personalizable con URLs reales de tu pasarela)
-        function handlePurchase(metodo) {
-            if (metodo === 'tarjeta') {
-                window.location.href = "/anual";
-            } else if (metodo === 'claro') {
-                window.location.href = "/mensual";
-            }
-        }
-
         // Control y persistencia del Banner de Cookies
         window.onload = function() {
             if (!localStorage.getItem('cookies-accepted')) {
@@ -338,6 +324,36 @@
                 banner.classList.add('hidden');
             }, 500);
         }
+    </script>
+
+    <!-- SCRIPT DE PARÁMETROS URL AUTOMÁTICO EN ENLACES CTA -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 1. Obtener los parámetros de la URL actual de la página
+            const urlParams = window.location.search;
+
+            // Si no hay parámetros en la URL (ej. no viene de un anuncio), no hace nada
+            if (!urlParams) return;
+
+            // 2. Seleccionar todos los botones CTA (identificados por la clase .btn-cta)
+            const ctaButtons = document.querySelectorAll(".btn-cta");
+
+            // 3. Recorrer cada botón y actualizar su enlace
+            ctaButtons.forEach(function (button) {
+                let currentHref = button.getAttribute("href");
+
+                if (currentHref) {
+                    // Verificar si el enlace original ya tiene un "?" para no romper la URL
+                    const separator = currentHref.includes("?") ? "&" : "?";
+                    
+                    // Eliminamos el "?" inicial de urlParams para concatenar correctamente si es necesario
+                    const cleanParams = urlParams.startsWith("?") ? urlParams.substring(1) : urlParams;
+
+                    // Asignar el nuevo enlace modificado al botón
+                    button.setAttribute("href", currentHref + separator + cleanParams);
+                }
+            });
+        });
     </script>
 </body>
 </html>
