@@ -270,9 +270,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="space-y-6">
                 <!-- Enlaces Legales -->
                 <div class="flex items-center justify-center gap-4 text-slate-200 font-semibold border-b border-neutral-900 pb-5">
-                    <a href="politica-de-privacidad.html" class="hover:text-white transition">Política de Privacidad</a>
-                    <a href="terminos-y-condiciones.html" class="hover:text-white transition">Términos y condiciones</a>
-                    <a href="contacto.html" class="hover:text-white transition">Contacto</a>
+                    <a href="privacy.html" class="hover:text-white transition">Política de Privacidad</a>
+                    <span>•</span>
+                    <a href="terms.html" class="hover:text-white transition">Términos y condiciones</a>
+                    <span>•</span>
+                    <a href="contact.html" class="hover:text-white transition">Contacto</a>
                 </div>
 
                 <!-- Textos de Disclaimer de Responsabilidad (Sin cursivas) -->
@@ -289,64 +291,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
 
-    <!-- 8. BANNER DE ACEPTACIÓN DE COOKIES (Flotante y Adaptable) -->
-    <div id="cookie-banner" class="fixed bottom-0 inset-x-0 md:bottom-5 md:right-5 md:left-auto md:max-w-md bg-brand-dark/95 backdrop-blur-md text-white p-5 md:rounded-3xl border-t md:border border-slate-800 shadow-2xl z-50 transform translate-y-full transition-all duration-500 ease-out hidden">
-        <div class="space-y-4">
-            <div class="flex items-start gap-3">
-                <div class="p-2 bg-brand-accent text-brand-dark rounded-xl shrink-0 mt-0.5">
-                    <i data-lucide="cookie" class="w-5 h-5"></i>
-                </div>
-                <div class="space-y-1">
-                    <h4 class="text-xs font-bold tracking-tight text-white">Uso de Cookies</h4>
-                    <p class="text-[11px] text-slate-300 leading-relaxed">
-                        Utilizamos cookies propias y de terceros para analizar el tráfico, personalizar contenido y medir la efectividad de nuestras campañas publicitarias. Puedes aceptar todas las cookies o consultar más información en nuestra Política de Privacidad.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="flex items-center justify-end pt-1">
-                <!-- Único Botón "Aceptar" -->
-                <button 
-                    onclick="acceptCookies()" 
-                    class="px-6 py-2 bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-extrabold text-xs rounded-full border border-brand-dark transition duration-150 shadow-md active:scale-[0.98]"
-                >
-                    Aceptar
-                </button>
-            </div>
-        </div>
-    </div>
-
     <!-- SCRIPT DE INTERACCIÓN -->
     <script>
         // Inicialización de iconos Lucide
         lucide.createIcons();
-
-        // Control y persistencia del Banner de Cookies
-        window.onload = function() {
-            if (!localStorage.getItem('cookies-accepted')) {
-                const banner = document.getElementById('cookie-banner');
-                banner.classList.remove('hidden');
-                setTimeout(() => {
-                    banner.classList.remove('translate-y-full');
-                }, 800); 
-            }
-        }
-
-        // Aceptación de cookies
-        function acceptCookies() {
-            localStorage.setItem('cookies-accepted', 'true');
-            closeCookieBanner();
-        }
-
-        // Cierre y desaparición absoluta del banner para no interferir con la maquetación
-        function closeCookieBanner() {
-            const banner = document.getElementById('cookie-banner');
-            banner.classList.add('translate-y-full');
-            
-            setTimeout(() => {
-                banner.classList.add('hidden');
-            }, 500);
-        }
     </script>
 
     <!-- SCRIPT DE PARÁMETROS URL AUTOMÁTICO EN ENLACES CTA -->
